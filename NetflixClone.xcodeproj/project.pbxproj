@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
+		59948842268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
 		59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9425F2689438800FD4021 /* NetflixCloneApp.swift */; };
 		59B942732689438900FD4021 /* NetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9425F2689438800FD4021 /* NetflixCloneApp.swift */; };
 		59B942742689438900FD4021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942602689438800FD4021 /* ContentView.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
 		59B942602689438800FD4021 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59B942612689438800FD4021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 				59B9428A268948F100FD4021 /* Movie.swift */,
 				59B9428D2689493600FD4021 /* StandardHomeMovie.swift */,
 				59B942902689495000FD4021 /* GlobalHelpers.swift */,
+				59948840268956EC00FCE4D6 /* TopMoviePreview.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -220,6 +224,7 @@
 				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942742689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
+				59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
 				59B9428B268948F100FD4021 /* Movie.swift in Sources */,
 				59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 			);
@@ -234,6 +239,7 @@
 				59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942752689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428F2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
+				59948842268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
 				59B9428C268948F100FD4021 /* Movie.swift in Sources */,
 				59B942732689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 			);
