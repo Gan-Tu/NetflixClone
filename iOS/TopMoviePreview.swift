@@ -28,6 +28,7 @@ struct TopMoviePreview: View {
             
             VStack {
                 Spacer()
+
                 HStack {
                     ForEach(movie.categories, id: \.self) {category in
                         HStack {
@@ -38,10 +39,29 @@ struct TopMoviePreview: View {
                                     .foregroundColor(.blue)
                                     .font(.system(size: 3))
                             }
-                        }
+                        }.padding(.bottom, 5)
                     }
                 }
-                Text("Row of buttons")
+                
+                HStack {
+                    Spacer()
+
+                    SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+                        // to be done
+                    }
+                    
+                    Spacer()
+                    
+                    Text("Play button")
+                    
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
+                        // to be done
+                    }
+                    
+                    Spacer()
+                }
             }
         }.foregroundColor(.white)
     }
