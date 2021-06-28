@@ -21,7 +21,9 @@ import SwiftUI
                     ForEach(vm.allCategories, id: \.self) {category in
                         VStack {
                             HStack {
-                                Text(category).font(.title3).bold()
+                                Text(category)
+                                    .font(.title3)
+                                    .bold()
                                 Spacer()
                             }
                             

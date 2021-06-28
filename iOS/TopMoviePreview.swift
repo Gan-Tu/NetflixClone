@@ -32,8 +32,8 @@ struct TopMoviePreview: View {
                     ForEach(movie.categories, id: \.self) {category in
                         HStack {
                             Text(category)
+                                .font(.footnote)
                             if !isLastCategory(category) {
-                                
                                 Image(systemName: "circle.fill")
                                     .foregroundColor(.blue)
                                     .font(.system(size: 3))
@@ -49,6 +49,6 @@ struct TopMoviePreview: View {
 
 struct TopMoviePreview_Previews: PreviewProvider {
     static var previews: some View {
-        TopMoviePreview(movie: exampleMovie1)
+        TopMoviePreview(movie: anotherLifeMovie)
     }
 }

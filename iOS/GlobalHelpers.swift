@@ -7,9 +7,14 @@
 
 import Foundation
 
+let anotherLifeMovie = Movie(id: UUID().uuidString,
+                             name: "Another Life",
+                             thumbnailURL: URL(string: "https://static.wikia.nocookie.net/soundeffects/images/1/12/Another_Life_2019_TV_Series_Poster.jpg/revision/latest/scale-to-width-down/426?cb=20210112222440")!,
+                             categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-fy TV"])
+
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "DARK",
-                          thumbnailURL: URL(string: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQS4aCgNaUeXAgsbXrmYZrTmQ7zQSqXd2aWrEbET_swLIlZltsL")!,
+                          thumbnailURL: URL(string: "https://picsum.photos/200/300?v1")!,
                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-fy TV"])
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
@@ -28,7 +33,7 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v5")!,
                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-fy TV"])
 let exampleMovie6 = Movie(id: UUID().uuidString,
-                          name: "After life",
+                          name: "The Crown",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v6")!,
                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-fy TV"])
 
