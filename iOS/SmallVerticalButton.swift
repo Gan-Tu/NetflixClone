@@ -21,9 +21,7 @@ struct SmallVerticalButton: View {
     var onButtonClick: () -> Void
     
     var body: some View {
-        Button(action: {
-            onButtonClick()
-        }, label: {
+        Button(action: onButtonClick, label: {
             VStack {
                 Image(systemName: imageName)
                     .foregroundColor(.white)
@@ -32,7 +30,6 @@ struct SmallVerticalButton: View {
                     .foregroundColor(.white)
                     .font(.system(size: 14))
                     .bold()
-                    .padding(.vertical, 5)
             }
         })
     }
