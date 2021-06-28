@@ -24,7 +24,6 @@ struct TopMoviePreview: View {
                 .resizable()
                 .scaledToFill()
                 .clipped()
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             VStack {
                 Spacer()
@@ -39,9 +38,9 @@ struct TopMoviePreview: View {
                                     .foregroundColor(.blue)
                                     .font(.system(size: 3))
                             }
-                        }.padding(.bottom, 5)
+                        }
                     }
-                }
+                }.padding(.bottom, 10)
                 
                 HStack {
                     Spacer()
@@ -65,7 +64,12 @@ struct TopMoviePreview: View {
                     
                     Spacer()
                 }
+                .padding(.bottom, 10)
             }
+            .background(
+                LinearGradient.blackOpacityGradient
+                    .padding(.top, 250)
+            )
         }.foregroundColor(.white)
     }
 }
