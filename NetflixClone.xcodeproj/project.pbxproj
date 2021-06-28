@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,17 @@
 		59B942752689438900FD4021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942602689438800FD4021 /* ContentView.swift */; };
 		59B942762689438900FD4021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B942612689438800FD4021 /* Assets.xcassets */; };
 		59B942772689438900FD4021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B942612689438800FD4021 /* Assets.xcassets */; };
+		59B942822689469500FD4021 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 59B942812689469500FD4021 /* KingfisherSwiftUI */; };
+		59B942882689487D00FD4021 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942872689487D00FD4021 /* HomeView.swift */; };
+		59B942892689487D00FD4021 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942872689487D00FD4021 /* HomeView.swift */; };
+		59B9428B268948F100FD4021 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428A268948F100FD4021 /* Movie.swift */; };
+		59B9428C268948F100FD4021 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428A268948F100FD4021 /* Movie.swift */; };
+		59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428D2689493600FD4021 /* StandardHomeMovie.swift */; };
+		59B9428F2689493600FD4021 /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428D2689493600FD4021 /* StandardHomeMovie.swift */; };
+		59B942912689495000FD4021 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942902689495000FD4021 /* GlobalHelpers.swift */; };
+		59B942922689495000FD4021 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942902689495000FD4021 /* GlobalHelpers.swift */; };
+		59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9429326894CB300FD4021 /* HomeViewModel.swift */; };
+		59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9429326894CB300FD4021 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,11 @@
 		59B9426E2689438900FD4021 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B942702689438900FD4021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B942712689438900FD4021 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		59B942872689487D00FD4021 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Shared/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		59B9428A268948F100FD4021 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		59B9428D2689493600FD4021 /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
+		59B942902689495000FD4021 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		59B9429326894CB300FD4021 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B942822689469500FD4021 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +93,12 @@
 		59B942682689438900FD4021 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				59B942872689487D00FD4021 /* HomeView.swift */,
+				59B9429326894CB300FD4021 /* HomeViewModel.swift */,
 				59B942692689438900FD4021 /* Info.plist */,
+				59B9428A268948F100FD4021 /* Movie.swift */,
+				59B9428D2689493600FD4021 /* StandardHomeMovie.swift */,
+				59B942902689495000FD4021 /* GlobalHelpers.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -106,6 +128,9 @@
 			dependencies = (
 			);
 			name = "NetflixClone (iOS)";
+			packageProductDependencies = (
+				59B942812689469500FD4021 /* KingfisherSwiftUI */,
+			);
 			productName = "NetflixClone (iOS)";
 			productReference = 59B942662689438800FD4021 /* NetflixClone.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 59B942592689438700FD4021;
+			packageReferences = (
+				59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 59B942672689438800FD4021 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,7 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B942912689495000FD4021 /* GlobalHelpers.swift in Sources */,
+				59B942882689487D00FD4021 /* HomeView.swift in Sources */,
+				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942742689438900FD4021 /* ContentView.swift in Sources */,
+				59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
+				59B9428B268948F100FD4021 /* Movie.swift in Sources */,
 				59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +229,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B942922689495000FD4021 /* GlobalHelpers.swift in Sources */,
+				59B942892689487D00FD4021 /* HomeView.swift in Sources */,
+				59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942752689438900FD4021 /* ContentView.swift in Sources */,
+				59B9428F2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
+				59B9428C268948F100FD4021 /* Movie.swift in Sources */,
 				59B942732689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59B942812689469500FD4021 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59B9425A2689438700FD4021 /* Project object */;
 }
