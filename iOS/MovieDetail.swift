@@ -74,6 +74,8 @@ struct MovieInfoSubheadline: View {
             
             Text(movie.numberOfSeasonsDisplay)
                 .bold()
+            
+            QualityLabel(label: "HD")
         }
         .foregroundColor(.white)
         .padding(.vertical, 6)
@@ -94,5 +96,18 @@ struct RatingView: View {
                 .bold()
         }
         .frame(width: 50, height: 20)
+    }
+}
+
+struct QualityLabel: View {
+    var label: String
+    var body: some View {
+        Text(label)
+            .bold()
+            .padding(.vertical, 2)
+            .padding(.horizontal, 2)
+            .border(Color.gray)
+            .foregroundColor(.white)
+            .font(.system(size: 10))
     }
 }
