@@ -50,6 +50,24 @@ struct MovieDetail: View {
                         CurrentEpisodeInformationView(movie: movie)
                         
                         CastInfoView(movie: movie)
+                        
+                        HStack(spacing: 60) {
+                            SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+                                // TODO
+                            }
+                            
+                            SmallVerticalButton(text: "Rate", isOnImage: "hand.thumbsup.fill", isOffImage: "hand.thumbsup", isOn: false) {
+                                // TODO
+                            }
+                            
+                            SmallVerticalButton(text: "Share", isOnImage: "square.and.arrow.up", isOffImage: "square.and.arrow.up", isOn: true) {
+                                // TODO
+                            }
+                            
+                            Spacer()
+                        }
+                        .padding(.leading, 20)
+                        
                     }
                     .padding(.horizontal, 10)
                 }
@@ -137,7 +155,7 @@ struct CastInfoView: View {
             }
         }
         .font(.caption)
-        .foregroundColor(.gray)
+        .foregroundColor(Color(red: 177, green: 177, blue: 177))
         .padding(.vertical, 10)
     }
 }
