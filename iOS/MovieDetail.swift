@@ -18,6 +18,7 @@ struct MovieDetail: View {
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             VStack {
+                // START: Fixed close button
                 HStack {
                     Spacer()
                     
@@ -30,27 +31,37 @@ struct MovieDetail: View {
                     .buttonStyle(PlainButtonStyle())
                 }
                 .padding(.horizontal, 22)
+                // END: Fixed close button
                 
+                // START: Main Scrollable View
                 ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
                     VStack {
+                        
+                        // Media Poster
                         StandardHomeMovie(movie: movie)
                             .frame(width: screen.width / 2.5)
                         
+                        // Media Subheadline
                         MovieInfoSubheadline(movie: movie)
                         
+                        // Media Promotion
                         if movie.promotionHeadline != nil {
                             Text(movie.promotionHeadline!)
                                 .bold()
                         }
                         
+                        // Media Play Button
                         PlayButton(text: "Play", imageName: "play.fill", backgroundColor: .red) {
                             // TODO
                         }
                         
+                        // Media Current Episode Information
                         CurrentEpisodeInformationView(movie: movie)
                         
+                        // Media Casts
                         CastInfoView(movie: movie)
                         
+                        // START: Media Interactive Buttons
                         HStack(spacing: 60) {
                             SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
                                 // TODO
@@ -67,10 +78,17 @@ struct MovieDetail: View {
                             Spacer()
                         }
                         .padding(.leading, 20)
+                        // END: Media Interactive Buttons
+                        
+                        
+                        // Tab Switchers
+                        CustomTabSwitcher()
+                        
                         
                     }
                     .padding(.horizontal, 10)
                 }
+                // END: Main Scrollable View
                 
                 Spacer()
             }
@@ -85,6 +103,13 @@ struct MovieDetail_Previews: PreviewProvider {
         // MovieDetail(movie: exampleMovie5)
     }
 }
+
+enum CustomTab: String {
+    case episodes = "EPISODES"
+    case trailers = "TRAILERS & MORE"
+    case more = "MORE LIKE THIS"
+}
+
 
 struct MovieInfoSubheadline: View {
     var movie: Movie
