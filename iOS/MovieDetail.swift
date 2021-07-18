@@ -82,7 +82,7 @@ struct MovieDetail: View {
                         
                         
                         // Tab Switchers
-                        CustomTabSwitcher()
+                        // CustomTabSwitcher()
                         
                         
                     }
@@ -102,12 +102,6 @@ struct MovieDetail_Previews: PreviewProvider {
         MovieDetail(movie: anotherLifeMovie)
         // MovieDetail(movie: exampleMovie5)
     }
-}
-
-enum CustomTab: String {
-    case episodes = "EPISODES"
-    case trailers = "TRAILERS & MORE"
-    case more = "MORE LIKE THIS"
 }
 
 
