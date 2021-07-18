@@ -11,7 +11,7 @@ import SwiftUI
 
     var vm : HomeViewModel = HomeViewModel()
 
-        let screen = UIScreen.main.bounds
+    let screen = UIScreen.main.bounds
 
     var body: some View {
         ZStack {

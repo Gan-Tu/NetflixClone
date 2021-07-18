@@ -16,8 +16,6 @@
 		59B942762689438900FD4021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B942612689438800FD4021 /* Assets.xcassets */; };
 		59B942772689438900FD4021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B942612689438800FD4021 /* Assets.xcassets */; };
 		59B942822689469500FD4021 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 59B942812689469500FD4021 /* KingfisherSwiftUI */; };
-		59B942882689487D00FD4021 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942872689487D00FD4021 /* HomeView.swift */; };
-		59B942892689487D00FD4021 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942872689487D00FD4021 /* HomeView.swift */; };
 		59B9428B268948F100FD4021 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428A268948F100FD4021 /* Movie.swift */; };
 		59B9428C268948F100FD4021 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428A268948F100FD4021 /* Movie.swift */; };
 		59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9428D2689493600FD4021 /* StandardHomeMovie.swift */; };
@@ -26,6 +24,8 @@
 		59B942922689495000FD4021 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942902689495000FD4021 /* GlobalHelpers.swift */; };
 		59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9429326894CB300FD4021 /* HomeViewModel.swift */; };
 		59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9429326894CB300FD4021 /* HomeViewModel.swift */; };
+		59CCD39D26A3F0CB007C2D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39C26A3F0CB007C2D19 /* HomeView.swift */; };
+		59CCD39E26A3F0CB007C2D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39C26A3F0CB007C2D19 /* HomeView.swift */; };
 		59FC2E4B26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */; };
 		59FC2E4C26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */; };
 		59FC2E4E2689629600ABE6EF /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4D2689629600ABE6EF /* WhiteButton.swift */; };
@@ -42,11 +42,11 @@
 		59B9426E2689438900FD4021 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B942702689438900FD4021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B942712689438900FD4021 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		59B942872689487D00FD4021 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = iOS/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		59B9428A268948F100FD4021 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		59B9428D2689493600FD4021 /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
 		59B942902689495000FD4021 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		59B9429326894CB300FD4021 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		59CCD39C26A3F0CB007C2D19 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		59FC2E4D2689629600ABE6EF /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +70,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		595EF63D26A3F05B007113AC /* HomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				59CCD39C26A3F0CB007C2D19 /* HomeView.swift */,
+				59B9429326894CB300FD4021 /* HomeViewModel.swift */,
+			);
+			path = HomeViews;
+			sourceTree = "<group>";
+		};
+		595EF63E26A3F072007113AC /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				59B9428D2689493600FD4021 /* StandardHomeMovie.swift */,
+				59948840268956EC00FCE4D6 /* TopMoviePreview.swift */,
+				59FC2E4D2689629600ABE6EF /* WhiteButton.swift */,
+				59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		595EF63F26A3F07D007113AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59B9428A268948F100FD4021 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		595EF64026A3F088007113AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				59B942902689495000FD4021 /* GlobalHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		59B942592689438700FD4021 = {
 			isa = PBXGroup;
 			children = (
@@ -102,15 +138,11 @@
 		59B942682689438900FD4021 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				59B942872689487D00FD4021 /* HomeView.swift */,
-				59B9429326894CB300FD4021 /* HomeViewModel.swift */,
+				595EF63D26A3F05B007113AC /* HomeViews */,
 				59B942692689438900FD4021 /* Info.plist */,
-				59B9428A268948F100FD4021 /* Movie.swift */,
-				59B9428D2689493600FD4021 /* StandardHomeMovie.swift */,
-				59B942902689495000FD4021 /* GlobalHelpers.swift */,
-				59948840268956EC00FCE4D6 /* TopMoviePreview.swift */,
-				59FC2E4D2689629600ABE6EF /* WhiteButton.swift */,
-				59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */,
+				595EF63F26A3F07D007113AC /* Model */,
+				595EF63E26A3F072007113AC /* HelperViews */,
+				595EF64026A3F088007113AC /* Helpers */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -228,10 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B942912689495000FD4021 /* GlobalHelpers.swift in Sources */,
-				59B942882689487D00FD4021 /* HomeView.swift in Sources */,
 				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942742689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
+				59CCD39D26A3F0CB007C2D19 /* HomeView.swift in Sources */,
 				59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
 				59B9428B268948F100FD4021 /* Movie.swift in Sources */,
 				59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */,
@@ -245,10 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B942922689495000FD4021 /* GlobalHelpers.swift in Sources */,
-				59B942892689487D00FD4021 /* HomeView.swift in Sources */,
 				59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942752689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428F2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
+				59CCD39E26A3F0CB007C2D19 /* HomeView.swift in Sources */,
 				59948842268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
 				59B9428C268948F100FD4021 /* Movie.swift in Sources */,
 				59B942732689438900FD4021 /* NetflixCloneApp.swift in Sources */,
