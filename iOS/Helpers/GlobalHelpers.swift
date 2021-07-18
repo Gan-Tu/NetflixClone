@@ -15,6 +15,9 @@ let anotherLifeMovie = Movie(id: UUID().uuidString,
                              year: 2020,
                              rating: "TV-MA",
                              numberOfSeasons: 1,
+                             defaultEpisodeInfo: exampleEpisodeInfo,
+                             creators: "Baren bo Odan, Jantje Friese",
+                             casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                              promotionHeadline: "New Season Coming Soon")
 
 let exampleMovie1 = Movie(id: UUID().uuidString,
@@ -24,6 +27,9 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           year: 2020,
                           rating: "TV-MA",
                           numberOfSeasons: 2,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                           promotionHeadline: "Watch Season 2 Now")
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
@@ -32,6 +38,9 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           year: 2020,
                           rating: "TV-MA",
                           numberOfSeasons: 3,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                           promotionHeadline: "Watch Season 3 Now")
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
@@ -40,6 +49,9 @@ let exampleMovie3 = Movie(id: UUID().uuidString,
                           year: 2020,
                           rating: "TV-MA",
                           numberOfSeasons: 4,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                           promotionHeadline: "Watch Season 4 Now")
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
@@ -48,6 +60,9 @@ let exampleMovie4 = Movie(id: UUID().uuidString,
                           year: 2020,
                           rating: "TV-MA",
                           numberOfSeasons: 5,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                           promotionHeadline: "Watch Season 5 Now")
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hanibal",
@@ -56,6 +71,9 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           year: 2020,
                           rating: "TV-MA",
                           numberOfSeasons: 6,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                           promotionHeadline: "Watch Season 6 Now")
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "The Crown",
@@ -64,9 +82,14 @@ let exampleMovie6 = Movie(id: UUID().uuidString,
                           year: 2020,
                           rating: "TV-MA",
                           numberOfSeasons: 3,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
                           promotionHeadline: "Watch Season 3 Now")
 
 let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+
+let exampleEpisodeInfo = CurrentEpisodeInfo(episodeName: "Beginnings of Ending", description: "Sed efficitur eget neque eu aliquam. Mauris lacinia ex orci, sit amet lobortis mi faucibus quis. Aliquam at semper sapien, in rhoncus nunc. Phasellus non sagittis velit. Sed convallis, arcu sed varius semper", season: 2, episode: 1)
 
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(

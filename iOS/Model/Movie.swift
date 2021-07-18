@@ -17,9 +17,15 @@ struct Movie : Identifiable {
     // MovieDetail View
     var year: Int
     var rating: String
-    var numberOfSeasons: Int?   // could be a movie that has no seasons
+    var numberOfSeasons: Int?   // optional. could be a movie that has no seasons
     
-    var epsidoes: [Epsidoe]?
+    // Personalization
+    var currentEpisode: CurrentEpisodeInfo?         // optional. user may have not watched the movie yet
+    var defaultEpisodeInfo: CurrentEpisodeInfo
+    var creators: String
+    var casts: String
+    
+    var episodes: [Episode]?
     
     var promotionHeadline: String?
     
@@ -33,4 +39,29 @@ struct Movie : Identifiable {
         }
         return ""
     }
+    
+    var episodeInfoDispaly: String {
+        if let current = currentEpisode {
+            return "S\(current.season):E\(current.episode) \(current.episodeName)"
+        } else {
+            return "S\(defaultEpisodeInfo.season):E\(defaultEpisodeInfo.episode) \(defaultEpisodeInfo.episodeName)"
+        }
+    }
+    
+    var episodeDescriptionDispaly: String {
+        if let current = currentEpisode {
+            return current.description
+        } else {
+            return defaultEpisodeInfo.description
+        }
+    }
+    
+}
+
+
+struct CurrentEpisodeInfo: Hashable, Equatable {
+    var episodeName: String
+    var description: String
+    var season: Int
+    var episode: Int
 }

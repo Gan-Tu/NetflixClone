@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Epsidoe: Identifiable {
+struct Episode: Identifiable {
     var id = UUID().uuidString
     
     var name: String

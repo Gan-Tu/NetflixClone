@@ -42,7 +42,16 @@ struct MovieDetail: View {
                             Text(movie.promotionHeadline!)
                                 .bold()
                         }
+                        
+                        PlayButton(text: "Play", imageName: "play.fill", backgroundColor: .red) {
+                            // TODO
+                        }
+                        
+                        CurrentEpisodeInformationView(movie: movie)
+                        
+                        CastInfoView(movie: movie)
                     }
+                    .padding(.horizontal, 10)
                 }
                 
                 Spacer()
@@ -55,7 +64,7 @@ struct MovieDetail: View {
 struct MovieDetail_Previews: PreviewProvider {
     static var previews: some View {
         MovieDetail(movie: anotherLifeMovie)
-        MovieDetail(movie: exampleMovie5)
+        // MovieDetail(movie: exampleMovie5)
     }
 }
 
@@ -109,5 +118,49 @@ struct QualityLabel: View {
             .border(Color.gray)
             .foregroundColor(.white)
             .font(.system(size: 10))
+    }
+}
+
+struct CastInfoView: View {
+    var movie: Movie
+
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Cast: \(movie.casts)")
+                Spacer()
+            }
+            
+            HStack {
+                Text("Creators: \(movie.creators)")
+                Spacer()
+            }
+        }
+        .font(.caption)
+        .foregroundColor(.gray)
+        .padding(.vertical, 10)
+    }
+}
+
+struct CurrentEpisodeInformationView: View {
+    var movie: Movie
+
+    var body: some View {
+        Group {
+            HStack {
+                Text(movie.episodeInfoDispaly)
+                    .bold()
+                
+                Spacer()
+            }
+            .padding(.vertical, 4)
+            
+            HStack {
+                Text(movie.episodeDescriptionDispaly)
+                    .font(.subheadline)
+                
+                Spacer()
+            }
+        }
     }
 }
