@@ -18,7 +18,7 @@ let anotherLifeMovie = Movie(id: UUID().uuidString,
                              defaultEpisodeInfo: exampleEpisodeInfo,
                              creators: "Baren bo Odan, Jantje Friese",
                              casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                             promotionHeadline: "New Season Coming Soon")
+                             moreLikeThisMovies: exampleMovies, promotionHeadline: "New Season Coming Soon")
 
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "DARK",
@@ -30,7 +30,7 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          promotionHeadline: "Watch Season 2 Now")
+                          moreLikeThisMovies: exampleMovies, promotionHeadline: "Watch Season 2 Now")
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v2")!,
@@ -41,7 +41,7 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          promotionHeadline: "Watch Season 3 Now")
+                          moreLikeThisMovies: exampleMovies, promotionHeadline: "Watch Season 3 Now")
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v3")!,
@@ -52,7 +52,7 @@ let exampleMovie3 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          promotionHeadline: "Watch Season 4 Now")
+                          moreLikeThisMovies: exampleMovies, promotionHeadline: "Watch Season 4 Now")
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v4")!,
@@ -63,7 +63,7 @@ let exampleMovie4 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          promotionHeadline: "Watch Season 5 Now")
+                          moreLikeThisMovies: exampleMovies, promotionHeadline: "Watch Season 5 Now")
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hanibal",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v5")!,
@@ -74,7 +74,7 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          promotionHeadline: "Watch Season 6 Now")
+                          moreLikeThisMovies: exampleMovies, promotionHeadline: "Watch Season 6 Now")
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "The Crown",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v6")!,
@@ -85,11 +85,16 @@ let exampleMovie6 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          promotionHeadline: "Watch Season 3 Now")
+                          moreLikeThisMovies: exampleMovies, promotionHeadline: "Watch Season 3 Now")
 
-let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+var exampleMovies: [Movie] {
+    return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6].shuffled()
+}
 
 let exampleEpisodeInfo = CurrentEpisodeInfo(episodeName: "Beginnings of Ending", description: "Sed efficitur eget neque eu aliquam. Mauris lacinia ex orci, sit amet lobortis mi faucibus quis. Aliquam at semper sapien, in rhoncus nunc. Phasellus non sagittis velit. Sed convallis, arcu sed varius semper", season: 2, episode: 1)
+
+let netflixGrayColor = Color(red: 177, green: 177, blue: 177)
+
 
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(

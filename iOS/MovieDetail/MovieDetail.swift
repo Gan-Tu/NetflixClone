@@ -82,7 +82,7 @@ struct MovieDetail: View {
                         
                         
                         // Tab Switchers
-                        // CustomTabSwitcher()
+                        // CustomTabSwitcher(tabs: [.episodes, .trailers, .more])
                         
                         
                     }
@@ -174,7 +174,7 @@ struct CastInfoView: View {
             }
         }
         .font(.caption)
-        .foregroundColor(Color(red: 177, green: 177, blue: 177))
+        .foregroundColor(netflixGrayColor)
         .padding(.vertical, 10)
     }
 }
