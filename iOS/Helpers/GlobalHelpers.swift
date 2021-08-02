@@ -48,11 +48,11 @@ let anotherLifeMovie = Movie(id: UUID().uuidString,
                              categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
                              year: 2020,
                              rating: "TV-MA",
-                             numberOfSeasons: 1,
+                             numberOfSeasons: 2,
                              defaultEpisodeInfo: exampleEpisodeInfo,
                              creators: "Baren bo Odan, Jantje Friese",
                              casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                             moreLikeThisMovies: exampleMovies, promotionHeadline: "New Season Coming Soon", trailers: exampleTrailers)
+                             moreLikeThisMovies: exampleMovies, episodes: allExampleEpisodes, promotionHeadline: "New Season Coming Soon", trailers: exampleTrailers)
 
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "DARK",

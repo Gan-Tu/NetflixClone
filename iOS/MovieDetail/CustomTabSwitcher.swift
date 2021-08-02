@@ -10,6 +10,9 @@ import SwiftUI
 struct CustomTabSwitcher: View {
     @State private var currentTab: CustomTab = .episodes
     
+    @Binding var showSeasonPicker: Bool
+    @Binding var selectedSeason : Int
+    
     var tabs: [CustomTab]
     var movie: Movie
     
@@ -49,9 +52,7 @@ struct CustomTabSwitcher: View {
             // Selected View
             switch currentTab {
             case .episodes:
-                SmallVerticalButton(text: currentTab.rawValue, isOnImage: "", isOffImage: "", isOn: false) {
-                    // todo
-                }
+                EpisodesView(episodes: movie.episodes ?? [], showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
             case .trailers:
                 TrailerList(trailers: movie.trailers)
             case .more:
@@ -74,7 +75,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-            CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: anotherLifeMovie)
+            CustomTabSwitcher(showSeasonPicker: .constant(false), selectedSeason: .constant(1), tabs: [.episodes, .trailers, .more], movie: anotherLifeMovie)
         }
     }
 }

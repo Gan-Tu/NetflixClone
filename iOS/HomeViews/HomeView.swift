@@ -12,6 +12,8 @@ import SwiftUI
     var vm : HomeViewModel = HomeViewModel()
 
     let screen = UIScreen.main.bounds
+        
+    @State private var movieDetailToShow: Movie? = nil
 
     var body: some View {
         ZStack {
@@ -44,6 +46,9 @@ import SwiftUI
                                         StandardHomeMovie(movie: movie)
                                             .frame(width: 100, height: 200)
                                             .padding(.horizontal, 20)
+                                            .onTapGesture(perform: {
+                                                movieDetailToShow = movie
+                                            })
                                     }
                                 }
                             })
@@ -51,6 +56,13 @@ import SwiftUI
                     }
                 }
             })
+            
+            if movieDetailToShow != nil {
+                MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
+                    .animation(.easeIn)
+                    .transition(.opacity)
+            }
+            
         }
         .foregroundColor(.white)
     }
