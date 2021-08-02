@@ -53,9 +53,7 @@ struct CustomTabSwitcher: View {
                     // todo
                 }
             case .trailers:
-                SmallVerticalButton(text: currentTab.rawValue, isOnImage: "", isOffImage: "", isOn: true) {
-                    // TODO
-                }
+                TrailerList(trailers: movie.trailers)
             case .more:
                 MoreLikeThis(movies: movie.moreLikeThisMovies)
             }

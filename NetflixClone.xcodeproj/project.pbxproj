@@ -11,6 +11,10 @@
 		594A21BD26B78E0E008AFF98 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BB26B78E0D008AFF98 /* Trailer.swift */; };
 		594A21BF26B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */; };
 		594A21C026B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */; };
+		594A21C326B790A4008AFF98 /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C226B790A4008AFF98 /* VideoPreviewImage.swift */; };
+		594A21C426B790A4008AFF98 /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C226B790A4008AFF98 /* VideoPreviewImage.swift */; };
+		594A21C626B79224008AFF98 /* TrailerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C526B79224008AFF98 /* TrailerList.swift */; };
+		594A21C726B79224008AFF98 /* TrailerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C526B79224008AFF98 /* TrailerList.swift */; };
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		5984A5E226AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
@@ -47,6 +51,8 @@
 /* Begin PBXFileReference section */
 		594A21BB26B78E0D008AFF98 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVideoViews.swift; sourceTree = "<group>"; };
+		594A21C226B790A4008AFF98 /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
+		594A21C526B79224008AFF98 /* TrailerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerList.swift; sourceTree = "<group>"; };
 		5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
 		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
@@ -88,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		594A21C126B79097008AFF98 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */,
+				594A21C226B790A4008AFF98 /* VideoPreviewImage.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
 		595EF63D26A3F05B007113AC /* HomeViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +129,6 @@
 				59B9428A268948F100FD4021 /* Movie.swift */,
 				59CCD3A526A3FC8A007C2D19 /* Episode.swift */,
 				594A21BB26B78E0D008AFF98 /* Trailer.swift */,
-				594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +147,7 @@
 				59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */,
 				59CCD3A826A40354007C2D19 /* CustomTabSwitcher.swift */,
 				5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */,
+				594A21C526B79224008AFF98 /* TrailerList.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -172,6 +187,7 @@
 				595EF63D26A3F05B007113AC /* HomeViews */,
 				59B942692689438900FD4021 /* Info.plist */,
 				595EF63F26A3F07D007113AC /* Model */,
+				594A21C126B79097008AFF98 /* VideoPlayer */,
 				595EF63E26A3F072007113AC /* HelperViews */,
 				595EF64026A3F088007113AC /* Helpers */,
 				5984A5DF26AB878C006CDC4D /* MovieDetail */,
@@ -296,6 +312,7 @@
 				594A21BF26B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */,
 				59CCD3A626A3FC8A007C2D19 /* Episode.swift in Sources */,
 				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
+				594A21C326B790A4008AFF98 /* VideoPreviewImage.swift in Sources */,
 				59B942742689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
 				59CCD39D26A3F0CB007C2D19 /* HomeView.swift in Sources */,
@@ -303,6 +320,7 @@
 				59B9428B268948F100FD4021 /* Movie.swift in Sources */,
 				59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 				5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */,
+				594A21C626B79224008AFF98 /* TrailerList.swift in Sources */,
 				59CCD3A926A40354007C2D19 /* CustomTabSwitcher.swift in Sources */,
 				59FC2E4B26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */,
 				59FC2E4E2689629600ABE6EF /* PlayButton.swift in Sources */,
@@ -319,6 +337,7 @@
 				594A21C026B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */,
 				59CCD3A726A3FC8A007C2D19 /* Episode.swift in Sources */,
 				59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */,
+				594A21C426B790A4008AFF98 /* VideoPreviewImage.swift in Sources */,
 				59B942752689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428F2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
 				59CCD39E26A3F0CB007C2D19 /* HomeView.swift in Sources */,
@@ -326,6 +345,7 @@
 				59B9428C268948F100FD4021 /* Movie.swift in Sources */,
 				59B942732689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 				5984A5E226AB8798006CDC4D /* MoreLikeThis.swift in Sources */,
+				594A21C726B79224008AFF98 /* TrailerList.swift in Sources */,
 				59CCD3AA26A40354007C2D19 /* CustomTabSwitcher.swift in Sources */,
 				59FC2E4C26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */,
 				59FC2E4F2689629600ABE6EF /* PlayButton.swift in Sources */,

@@ -10,6 +10,23 @@ import SwiftUI
 
 let exampleVideoURL = URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!
 
+let exampleImageURL = URL(string: "https://picsum.photos/300/104")!
+let exampleImageURL2 = URL(string: "https://picsum.photos/300/105")!
+let exampleImageURL3 = URL(string: "https://picsum.photos/300/106")!
+
+var randomExampleImageUrl: URL {
+    return [exampleImageURL, exampleImageURL2, exampleImageURL3].randomElement() ?? exampleImageURL
+}
+
+let exampleTrailer1 = Trailer(name: "Season 3 Trailer", videoUrl: exampleVideoURL, thumbnailImageURL: exampleImageURL)
+
+let exampleTrailer2 = Trailer(name: "The Hero's Journey", videoUrl: exampleVideoURL, thumbnailImageURL: exampleImageURL2)
+
+let exampleTrailer3 = Trailer(name: "The Mysterious", videoUrl: exampleVideoURL, thumbnailImageURL: exampleImageURL3)
+
+let exampleTrailers = [exampleTrailer1, exampleTrailer2, exampleTrailer3]
+
+
 let anotherLifeMovie = Movie(id: UUID().uuidString,
                              name: "Another Life",
                              thumbnailURL: URL(string: "https://m.media-amazon.com/images/M/MV5BMTNjOWNhYTQtNWEzOS00M2Q4LWEyOWMtZjU3ZjhhMTBmMWZjXkEyXkFqcGdeQXVyMjYwNDA2MDE@._V1_.jpg")!,
@@ -20,7 +37,7 @@ let anotherLifeMovie = Movie(id: UUID().uuidString,
                              defaultEpisodeInfo: exampleEpisodeInfo,
                              creators: "Baren bo Odan, Jantje Friese",
                              casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                             moreLikeThisMovies: exampleMovies, promotionHeadline: "New Season Coming Soon")
+                             moreLikeThisMovies: exampleMovies, promotionHeadline: "New Season Coming Soon", trailers: exampleTrailers)
 
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "DARK",
@@ -32,7 +49,7 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 2 Now")
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 2 Now", trailers: exampleTrailers)
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v2")!,
@@ -43,7 +60,7 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 3 Now")
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v3")!,
@@ -54,7 +71,7 @@ let exampleMovie3 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 4 Now")
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 4 Now", trailers: exampleTrailers)
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v4")!,
@@ -65,7 +82,7 @@ let exampleMovie4 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 5 Now")
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 5 Now", trailers: exampleTrailers)
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hanibal",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v5")!,
@@ -76,7 +93,7 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 6 Now")
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 6 Now", trailers: exampleTrailers)
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "The Crown",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v6")!,
@@ -87,7 +104,7 @@ let exampleMovie6 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 3 Now")
+                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
 
 var exampleMovies: [Movie] {
     return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
@@ -115,3 +132,4 @@ extension String {
         return size.width
     }
 }
+
