@@ -64,7 +64,7 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 2 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 2 Now", trailers: exampleTrailers)
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v2")!,
@@ -75,29 +75,29 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie3, exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v3")!,
                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
                           year: 2020,
                           rating: "TV-MA",
-                          numberOfSeasons: 4,
+                          numberOfSeasons: 2,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 4 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 4 Now", trailers: exampleTrailers)
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v4")!,
                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
                           year: 2020,
                           rating: "TV-MA",
-                          numberOfSeasons: 5,
+                          numberOfSeasons: 2,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 5 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie3, exampleMovie5, exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 5 Now", trailers: exampleTrailers)
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hanibal",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v5")!,
@@ -108,18 +108,18 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 6 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie6], episodes: [], promotionHeadline: "Watch Season 6 Now", trailers: exampleTrailers)
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "The Crown",
                           thumbnailURL: URL(string: "https://picsum.photos/200/300?v6")!,
                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
                           year: 2020,
                           rating: "TV-MA",
-                          numberOfSeasons: 3,
+                          numberOfSeasons: 1,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
 
 var exampleMovies: [Movie] {
     return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]

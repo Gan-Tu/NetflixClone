@@ -49,7 +49,7 @@ struct EpisodesView: View {
                             
                             Text("\(episode.length)m")
                                 .font(.system(size: 12))
-                                .foregroundColor(netflixGrayColor)
+                                .foregroundColor(.gray)
                         }
  
                         Spacer()
@@ -62,6 +62,7 @@ struct EpisodesView: View {
                     Text(episode.description)
                         .font(.system(size: 13))
                         .lineLimit(3)
+                        .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 }
                 .padding(.bottom, 20)
             }
@@ -71,7 +72,6 @@ struct EpisodesView: View {
             
         }
         .foregroundColor(.white)
-        .padding(.horizontal, 20)
     }
 }
 
@@ -83,6 +83,7 @@ struct EpisodesView_Previews: PreviewProvider {
             
             // For preview, can use .constant for bindings
             EpisodesView(episodes: allExampleEpisodes, showSeasonPicker: .constant(false), selectedSeason: .constant(1))
+                .padding(.horizontal, 20)
         }
     }
 }
