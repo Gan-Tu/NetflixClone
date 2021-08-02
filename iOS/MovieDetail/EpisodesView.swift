@@ -18,7 +18,7 @@ struct EpisodesView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 14) {
             // Season Picker
             HStack {
                 Button(action: {
@@ -36,7 +36,34 @@ struct EpisodesView: View {
             
             // Episodes List
             ForEach(getEpisodes(forSeason: selectedSeason)) { episode in
-                VideoPreviewImage(imageURl: episode.thumbnailURL, videoURL: episode.videoURL)
+                VStack(alignment: .leading) {
+                    HStack {
+                        VideoPreviewImage(imageURl: episode.thumbnailURL, videoURL: episode.videoURL)
+                            .frame(width: 120, height: 70)
+                            .aspectRatio(contentMode: .fit)
+                            .clipped()
+
+                        VStack(alignment: .leading) {
+                            Text("\(episode.episodeNumber). \(episode.name)")
+                                .font(.system(size: 16))
+                            
+                            Text("\(episode.length)m")
+                                .font(.system(size: 12))
+                                .foregroundColor(netflixGrayColor)
+                        }
+ 
+                        Spacer()
+                        
+                        // TODO: conver this to button
+                        Image(systemName: "arrow.down.to.line.alt")
+                            .font(.system(size: 20))
+                    }
+                    
+                    Text(episode.description)
+                        .font(.system(size: 13))
+                        .lineLimit(3)
+                }
+                .padding(.bottom, 20)
             }
             
             
@@ -44,6 +71,7 @@ struct EpisodesView: View {
             
         }
         .foregroundColor(.white)
+        .padding(.horizontal, 20)
     }
 }
 
