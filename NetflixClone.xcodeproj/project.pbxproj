@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594A21BC26B78E0D008AFF98 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BB26B78E0D008AFF98 /* Trailer.swift */; };
+		594A21BD26B78E0E008AFF98 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BB26B78E0D008AFF98 /* Trailer.swift */; };
+		594A21BF26B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */; };
+		594A21C026B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */; };
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		5984A5E226AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
@@ -41,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		594A21BB26B78E0D008AFF98 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
+		594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVideoViews.swift; sourceTree = "<group>"; };
 		5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
 		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 			children = (
 				59B9428A268948F100FD4021 /* Movie.swift */,
 				59CCD3A526A3FC8A007C2D19 /* Episode.swift */,
+				594A21BB26B78E0D008AFF98 /* Trailer.swift */,
+				594A21BE26B78E6A008AFF98 /* SwiftUIVideoViews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B942912689495000FD4021 /* GlobalHelpers.swift in Sources */,
+				594A21BC26B78E0D008AFF98 /* Trailer.swift in Sources */,
+				594A21BF26B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */,
 				59CCD3A626A3FC8A007C2D19 /* Episode.swift in Sources */,
 				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942742689438900FD4021 /* ContentView.swift in Sources */,
@@ -305,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B942922689495000FD4021 /* GlobalHelpers.swift in Sources */,
+				594A21BD26B78E0E008AFF98 /* Trailer.swift in Sources */,
+				594A21C026B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */,
 				59CCD3A726A3FC8A007C2D19 /* Episode.swift in Sources */,
 				59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59B942752689438900FD4021 /* ContentView.swift in Sources */,
