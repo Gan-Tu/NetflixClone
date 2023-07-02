@@ -7,30 +7,30 @@
 
 import SwiftUI
 
-    struct HomeView: View {
-
+struct HomeView: View {
+    
     var vm : HomeViewModel = HomeViewModel()
-
+    
     let screen = UIScreen.main.bounds
-        
+    
     @State private var movieDetailToShow: Movie? = nil
-
+    
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
-
+            
             // main vstack
             ScrollView(.vertical, showsIndicators: false, content: {
                 LazyVStack {
                     
                     TopRowButtonView()
-
+                    
                     TopMoviePreview(movie: anotherLifeMovie)
                         .frame(width: screen.width)
                         .padding(.top, -100)
                         .zIndex(-1.0)
-                        
-
+                    
+                    
                     ForEach(vm.allCategories, id: \.self) {category in
                         VStack {
                             HStack {
@@ -39,7 +39,7 @@ import SwiftUI
                                     .bold()
                                 Spacer()
                             }
-
+                            
                             ScrollView(.horizontal, showsIndicators: false, content: {
                                 LazyHStack {
                                     ForEach(vm.getMovie(forCategory: category)) {movie in

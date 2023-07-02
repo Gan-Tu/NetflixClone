@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct MovieDetail: View {
     var movie: Movie
     

@@ -17,6 +17,11 @@
 		594A21C726B79224008AFF98 /* TrailerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C526B79224008AFF98 /* TrailerList.swift */; };
 		594A21C926B79729008AFF98 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C826B79729008AFF98 /* EpisodesView.swift */; };
 		594A21CA26B79729008AFF98 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A21C826B79729008AFF98 /* EpisodesView.swift */; };
+		595292782A51E8BC0074EF0A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39C26A3F0CB007C2D19 /* HomeView.swift */; };
+		5952927B2A51EDC50074EF0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927A2A51EDC50074EF0A /* UIKit.framework */; };
+		5952927D2A51EE4F0074EF0A /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5952927C2A51EE4F0074EF0A /* KingfisherSwiftUI */; };
+		5952927F2A51EE570074EF0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927E2A51EE570074EF0A /* SwiftUI.framework */; };
+		595292812A51EE600074EF0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595292802A51EE600074EF0A /* SwiftUI.framework */; };
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		5984A5E226AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
@@ -37,7 +42,6 @@
 		59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9429326894CB300FD4021 /* HomeViewModel.swift */; };
 		59B9429526894CB300FD4021 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9429326894CB300FD4021 /* HomeViewModel.swift */; };
 		59CCD39D26A3F0CB007C2D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39C26A3F0CB007C2D19 /* HomeView.swift */; };
-		59CCD39E26A3F0CB007C2D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39C26A3F0CB007C2D19 /* HomeView.swift */; };
 		59CCD3A026A3F0FD007C2D19 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */; };
 		59CCD3A126A3F0FD007C2D19 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */; };
 		59CCD3A626A3FC8A007C2D19 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD3A526A3FC8A007C2D19 /* Episode.swift */; };
@@ -56,6 +60,9 @@
 		594A21C226B790A4008AFF98 /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
 		594A21C526B79224008AFF98 /* TrailerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerList.swift; sourceTree = "<group>"; };
 		594A21C826B79729008AFF98 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		5952927A2A51EDC50074EF0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5952927E2A51EE570074EF0A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		595292802A51EE600074EF0A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 		5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
 		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
@@ -84,6 +91,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B942822689469500FD4021 /* KingfisherSwiftUI in Frameworks */,
+				595292812A51EE600074EF0A /* SwiftUI.framework in Frameworks */,
+				5952927B2A51EDC50074EF0A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5952927F2A51EE570074EF0A /* SwiftUI.framework in Frameworks */,
+				5952927D2A51EE4F0074EF0A /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +115,16 @@
 				594A21C226B790A4008AFF98 /* VideoPreviewImage.swift */,
 			);
 			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		595292792A51EDC50074EF0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5952927E2A51EE570074EF0A /* SwiftUI.framework */,
+				595292802A51EE600074EF0A /* SwiftUI.framework */,
+				5952927A2A51EDC50074EF0A /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		595EF63D26A3F05B007113AC /* HomeViews */ = {
@@ -163,6 +184,7 @@
 				59B942682689438900FD4021 /* iOS */,
 				59B9426F2689438900FD4021 /* macOS */,
 				59B942672689438800FD4021 /* Products */,
+				595292792A51EDC50074EF0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +244,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				59A9DB592A51E72B000D5619 /* PBXTargetDependency */,
 			);
 			name = "NetflixClone (iOS)";
 			packageProductDependencies = (
@@ -242,8 +265,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				59A9DB5B2A51E739000D5619 /* PBXTargetDependency */,
 			);
 			name = "NetflixClone (macOS)";
+			packageProductDependencies = (
+				5952927C2A51EE4F0074EF0A /* KingfisherSwiftUI */,
+			);
 			productName = "NetflixClone (macOS)";
 			productReference = 59B9426E2689438900FD4021 /* NetflixClone.app */;
 			productType = "com.apple.product-type.application";
@@ -346,7 +373,6 @@
 				594A21C426B790A4008AFF98 /* VideoPreviewImage.swift in Sources */,
 				59B942752689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428F2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
-				59CCD39E26A3F0CB007C2D19 /* HomeView.swift in Sources */,
 				59948842268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
 				59B9428C268948F100FD4021 /* Movie.swift in Sources */,
 				59B942732689438900FD4021 /* NetflixCloneApp.swift in Sources */,
@@ -356,10 +382,22 @@
 				59FC2E4C26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */,
 				59FC2E4F2689629600ABE6EF /* PlayButton.swift in Sources */,
 				59CCD3A126A3F0FD007C2D19 /* MovieDetail.swift in Sources */,
+				595292782A51E8BC0074EF0A /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59A9DB592A51E72B000D5619 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 59A9DB582A51E72B000D5619 /* KingfisherSwiftUI */;
+		};
+		59A9DB5B2A51E739000D5619 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 59A9DB5A2A51E739000D5619 /* KingfisherSwiftUI */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		59B942782689438900FD4021 /* Debug */ = {
@@ -413,6 +451,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,6 +506,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -482,7 +524,8 @@
 				DEVELOPMENT_TEAM = DD62CH35WB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +547,8 @@
 				DEVELOPMENT_TEAM = DD62CH35WB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,6 +654,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5952927C2A51EE4F0074EF0A /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		59A9DB582A51E72B000D5619 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		59A9DB5A2A51E739000D5619 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
 		59B942812689469500FD4021 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
