@@ -23,7 +23,6 @@ struct MovieDetail: View {
             
             ZStack {
                 VStack {
-                    // START: Fixed close button
                     HStack {
                         Spacer()
                         
@@ -37,7 +36,6 @@ struct MovieDetail: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                     .padding(.horizontal, 22)
-                    // END: Fixed close button
                     
                     // START: Main Scrollable View
                     ScrollView(.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true) {
