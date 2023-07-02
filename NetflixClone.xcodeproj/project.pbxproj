@@ -22,6 +22,7 @@
 		5952927D2A51EE4F0074EF0A /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5952927C2A51EE4F0074EF0A /* KingfisherSwiftUI */; };
 		5952927F2A51EE570074EF0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927E2A51EE570074EF0A /* SwiftUI.framework */; };
 		595292812A51EE600074EF0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595292802A51EE600074EF0A /* SwiftUI.framework */; };
+		595292832A52255C0074EF0A /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595292822A52255C0074EF0A /* HomeStack.swift */; };
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		5984A5E226AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
@@ -63,6 +64,7 @@
 		5952927A2A51EDC50074EF0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5952927E2A51EE570074EF0A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		595292802A51EE600074EF0A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		595292822A52255C0074EF0A /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 		5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
 		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				59CCD39C26A3F0CB007C2D19 /* HomeView.swift */,
-				59B9429326894CB300FD4021 /* HomeViewModel.swift */,
+				595292822A52255C0074EF0A /* HomeStack.swift */,
 			);
 			path = HomeViews;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 				59B9428A268948F100FD4021 /* Movie.swift */,
 				59CCD3A526A3FC8A007C2D19 /* Episode.swift */,
 				594A21BB26B78E0D008AFF98 /* Trailer.swift */,
+				59B9429326894CB300FD4021 /* HomeViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
 				59B9428B268948F100FD4021 /* Movie.swift in Sources */,
 				59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */,
+				595292832A52255C0074EF0A /* HomeStack.swift in Sources */,
 				5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */,
 				594A21C626B79224008AFF98 /* TrailerList.swift in Sources */,
 				59CCD3A926A40354007C2D19 /* CustomTabSwitcher.swift in Sources */,

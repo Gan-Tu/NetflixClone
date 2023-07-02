@@ -13,6 +13,7 @@ struct Movie : Identifiable {
     var thumbnailURL: URL
     
     var categories: [String]
+    var movieType: MovieType
     
     // MovieDetail View
     var year: Int
@@ -68,4 +69,9 @@ struct CurrentEpisodeInfo: Hashable, Equatable {
     var description: String
     var season: Int
     var episode: Int
+}
+
+enum MovieType {
+    case movies
+    case tvShow
 }

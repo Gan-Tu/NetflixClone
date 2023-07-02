@@ -39,30 +39,7 @@ struct HomeView: View {
                         .padding(.top, -100)
                         .zIndex(-1.0)
                     
-                    
-                    ForEach(vm.allCategories, id: \.self) {category in
-                        VStack {
-                            HStack {
-                                Text(category)
-                                    .font(.title3)
-                                    .bold()
-                                Spacer()
-                            }
-                            
-                            ScrollView(.horizontal, showsIndicators: false, content: {
-                                LazyHStack {
-                                    ForEach(vm.getMovie(forCategory: category)) {movie in
-                                        StandardHomeMovie(movie: movie)
-                                            .frame(width: 100, height: 200)
-                                            .padding(.horizontal, 20)
-                                            .onTapGesture(perform: {
-                                                movieDetailToShow = movie
-                                            })
-                                    }
-                                }
-                            })
-                        }
-                    }
+                    HomeStack(vm: vm, topRowSelection: topRowSelection, movieDetailToShow: $movieDetailToShow)
                 }
             })
             
