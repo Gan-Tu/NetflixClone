@@ -51,6 +51,7 @@
 		59CCD3AA26A40354007C2D19 /* CustomTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD3A826A40354007C2D19 /* CustomTabSwitcher.swift */; };
 		59CE1A342A537C41004F3A28 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE1A332A537C41004F3A28 /* SearchBar.swift */; };
 		59CE1A362A537CC7004F3A28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE1A352A537CC7004F3A28 /* Colors.swift */; };
+		59CE1A382A5380B8004F3A28 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE1A372A5380B8004F3A28 /* ActivityIndicator.swift */; };
 		59FC2E4B26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */; };
 		59FC2E4C26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */; };
 		59FC2E4E2689629600ABE6EF /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4D2689629600ABE6EF /* PlayButton.swift */; };
@@ -87,6 +88,7 @@
 		59CCD3A826A40354007C2D19 /* CustomTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcher.swift; sourceTree = "<group>"; };
 		59CE1A332A537C41004F3A28 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		59CE1A352A537CC7004F3A28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		59CE1A372A5380B8004F3A28 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		59FC2E4D2689629600ABE6EF /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			children = (
 				59B942902689495000FD4021 /* GlobalHelpers.swift */,
 				59CE1A352A537CC7004F3A28 /* Colors.swift */,
+				59CE1A372A5380B8004F3A28 /* ActivityIndicator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
 				59CCD39D26A3F0CB007C2D19 /* HomeView.swift in Sources */,
 				59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */,
+				59CE1A382A5380B8004F3A28 /* ActivityIndicator.swift in Sources */,
 				59B9428B268948F100FD4021 /* Movie.swift in Sources */,
 				59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */,
 				595292832A52255C0074EF0A /* HomeStack.swift in Sources */,
