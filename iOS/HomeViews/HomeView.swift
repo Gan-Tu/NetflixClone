@@ -31,7 +31,7 @@ struct HomeView: View {
                     TopRowButtonView(topRowSelection: $topRowSelection,
                                      homeGenre: $homeGenre,
                                      showGenreSelection:$showGenreSelection,
-                                     showTopRowSelection: $showGenreSelection
+                                     showTopRowSelection: $showTopRowSelection
                     )
                     
                     TopMoviePreview(movie: anotherLifeMovie)
@@ -47,6 +47,82 @@ struct HomeView: View {
                 MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
                     .animation(.easeIn)
                     .transition(.opacity)
+            }
+            
+            if showTopRowSelection {
+                Group {
+                    Color.black.opacity(0.9)
+
+                    VStack(spacing: 40) {
+                        Spacer()
+                        
+                        ForEach(HomeTopRow.allCases, id: \.self) {topRow in
+                            Button(action: {
+                                topRowSelection = topRow
+                                showTopRowSelection = false
+                            }, label: {
+                                if topRow == topRowSelection {
+                                    Text("\(topRow.rawValue)")
+                                        .bold()
+                                } else {
+                                    Text("\(topRow.rawValue)")
+                                        .foregroundColor(.gray)
+                                }
+                            })
+                            
+                        }
+                        
+                        Spacer()
+
+                        Button(action: {
+                            showTopRowSelection = false
+                        }, label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 40))
+                        })
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
+            }
+            
+            if showGenreSelection {
+                Group {
+                    Color.black.opacity(0.9)
+
+                    VStack(spacing: 40) {
+                        Spacer()
+                        
+                        ScrollView {
+                            ForEach(HomeGenre.allCases, id: \.self) {genre in
+                                Button(action: {
+                                    homeGenre = genre
+                                    showGenreSelection = false
+                                }, label: {
+                                    if genre == homeGenre {
+                                        Text("\(genre.rawValue)")
+                                            .bold()
+                                    } else {
+                                        Text("\(genre.rawValue)")
+                                            .foregroundColor(.gray)
+                                    }
+                                })
+                                .padding(.bottom, 40)
+                            }
+                        }
+                        
+                        Spacer()
+
+                        Button(action: {
+                            showGenreSelection = false
+                        }, label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 40))
+                        })
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
             }
             
         }
@@ -122,6 +198,7 @@ struct TopRowButtonView: View {
                         .scaledToFit()
                         .frame(width: 50)
                 })
+                .buttonStyle(PlainButtonStyle())
 
                 HStack(spacing: 20) {
                     Button(action: {
@@ -166,7 +243,7 @@ enum HomeTopRow: String, CaseIterable {
     case myList = "My List"
 }
 
-enum HomeGenre: String {
+enum HomeGenre: String, CaseIterable {
     case allGenres = "All Genres"
     case action = "Action"
     case comedy = "Comedy"
