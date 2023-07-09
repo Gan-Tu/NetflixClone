@@ -20,16 +20,17 @@ struct ComingSoon: View {
                 Color.black.edgesIgnoringSafeArea(.all)
                 
                 ScrollView {
-                    LazyVStack {
+                    LazyVStack(spacing: 40) {
                         NotificationBar(showNotificationList: $showNotificationList)
                         
                         ForEach(vm.movies, id: \.id) {movie in
                             ComingSoonRow(movie: movie, movieDetailToShow: $movieDetailToShow)
-                                .frame(height: 400)
+                                .frame(maxHeight: 500)
                         }
                     }
                 }
                 .foregroundColor(.white)
+                .padding(.horizontal, 5)
             }
             
             NavigationLink(
