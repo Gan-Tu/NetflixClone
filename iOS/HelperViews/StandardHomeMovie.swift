@@ -20,7 +20,7 @@ struct StandardHomeMovie: View {
             KFImage(movie.thumbnailURL)
                 .resizable()
                 .scaledToFill()
-                .frame(width: proxy.size.width, height: proxy.size.height)
+                .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
                 .clipped()
         }
     }

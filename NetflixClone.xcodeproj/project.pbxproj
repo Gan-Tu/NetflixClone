@@ -47,6 +47,7 @@
 		59C4F0A02A5B0AC9003CF61B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F09E2A5B0AB5003CF61B /* SearchViewModel.swift */; };
 		59C4F0A22A5B0D7B003CF61B /* GenerateMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F0A12A5B0D7B003CF61B /* GenerateMovies.swift */; };
 		59C4F0A42A5B1526003CF61B /* PopularMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F0A32A5B1526003CF61B /* PopularMovieView.swift */; };
+		59C4F0A92A5B2800003CF61B /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 59C4F0A82A5B2800003CF61B /* LoremSwiftum */; };
 		59CCD39D26A3F0CB007C2D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39C26A3F0CB007C2D19 /* HomeView.swift */; };
 		59CCD3A026A3F0FD007C2D19 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */; };
 		59CCD3A126A3F0FD007C2D19 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */; };
@@ -109,6 +110,7 @@
 			files = (
 				59B942822689469500FD4021 /* KingfisherSwiftUI in Frameworks */,
 				595292812A51EE600074EF0A /* SwiftUI.framework in Frameworks */,
+				59C4F0A92A5B2800003CF61B /* LoremSwiftum in Frameworks */,
 				5952927B2A51EDC50074EF0A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +284,7 @@
 			name = "NetflixClone (iOS)";
 			packageProductDependencies = (
 				59B942812689469500FD4021 /* KingfisherSwiftUI */,
+				59C4F0A82A5B2800003CF61B /* LoremSwiftum */,
 			);
 			productName = "NetflixClone (iOS)";
 			productReference = 59B942662689438800FD4021 /* NetflixClone.app */;
@@ -336,6 +339,7 @@
 			mainGroup = 59B942592689438700FD4021;
 			packageReferences = (
 				59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				59C4F0A72A5B2800003CF61B /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
 			);
 			productRefGroup = 59B942672689438800FD4021 /* Products */;
 			projectDirPath = "";
@@ -693,6 +697,14 @@
 				minimumVersion = 5.14.1;
 			};
 		};
+		59C4F0A72A5B2800003CF61B /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -715,6 +727,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 59B942802689469500FD4021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
+		};
+		59C4F0A82A5B2800003CF61B /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59C4F0A72A5B2800003CF61B /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -18,7 +18,8 @@ struct PopularMovieView: View {
                 KFImage(movie.thumbnailURL)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: proxy.size.width / 3)
+                    .frame(width: proxy.size.width/3, height: proxy.size.height, alignment: .center)
+                    .clipped()
                 
                 Text(movie.name)
                 

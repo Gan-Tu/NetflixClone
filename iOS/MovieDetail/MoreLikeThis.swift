@@ -20,6 +20,7 @@ struct MoreLikeThis: View {
         LazyVGrid(columns: columns) {
             ForEach(0..<movies.count) { index in
                 StandardHomeMovie(movie: movies[index])
+                    .frame(height: 175)
             }
         }
     }

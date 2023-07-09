@@ -69,7 +69,7 @@ struct PopularList: View {
                 .font(.title3)
                 .padding(.leading, 12)
             HStack {
-                LazyVStack {
+                LazyVStack(spacing: 10) {
                     ForEach(movies, id: \.id) { movie in
                         PopularMovieView(movie: movie, movieDetailToShow: $movieDetailToShow)
                             .frame(height: 80)
