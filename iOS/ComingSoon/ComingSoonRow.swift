@@ -77,6 +77,11 @@ struct ComingSoonRow: View {
 
 struct ComingSoonRow_Previews: PreviewProvider {
     static var previews: some View {
-        ComingSoonRow(movie: exampleMovie1, movieDetailToShow: .constant(nil))
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            ComingSoonRow(movie: exampleMovie1, movieDetailToShow: .constant(nil))
+        }
+        .foregroundColor(.white)
     }
 }
