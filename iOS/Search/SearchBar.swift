@@ -38,7 +38,7 @@ struct SearchBar: View {
                     if !text.isEmpty {
                         if isLoading {
                             Button(action: {
-                                text = ""
+                                // text = ""
                             }, label: {
                                 ActivityIndicator(style: .medium, animate: .constant(true))
                                     .configure {
@@ -50,7 +50,7 @@ struct SearchBar: View {
                             
                         } else {
                             Button(action: {
-                                text = ""
+                                 text = ""
                             }, label: {
                                 Image(systemName: "xmark.circle.fill")
                                     .foregroundColor(.graySearchText)
@@ -85,7 +85,6 @@ struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
-            
             SearchBar(text: .constant(""), isLoading: .constant(false))
                 .padding()
         }
