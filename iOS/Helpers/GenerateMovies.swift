@@ -18,8 +18,9 @@ func generateMovies(_ count: Int) -> [Movie] {
         let nameLength = Int.random(in: 9..<20)
         let name = randomString(length: nameLength)
         
-        let randThumbnail = Int.random(in: 0...9)
-        let thumbnail = URL(string: "https://picsum.photos/300/10\(randThumbnail)")!
+        let randThumbnail = Int.random(in: 0...40)
+//        let thumbnail = URL(string: "https://picsum.photos/300/10\(randThumbnail)")!
+        let thumbnail = URL(string: "https://picsum.photos/id/\(randThumbnail*2)/300/200")!
         
         let year = Int.random(in: 2000...2020)
         
@@ -59,8 +60,6 @@ func generateTrailers(_ count: Int) -> [Trailer] {
     var allTrailers: [Trailer] = []
     
     for _ in 0..<count {
-        let id = UUID().uuidString
-        
         let nameLength = Int.random(in: 9..<20)
         let name = randomString(length: nameLength)
         

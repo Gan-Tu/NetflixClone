@@ -43,7 +43,7 @@ struct MovieDetail: View {
                             
                             // Media Poster
                             StandardHomeMovie(movie: movie)
-                                .frame(width: screen.width / 2.5)
+                                .frame(width: screen.width / 2.5, height: 240)
                             
                             // Media Subheadline
                             MovieInfoSubheadline(movie: movie)

@@ -60,9 +60,9 @@ struct SearchBar: View {
                         }
                     }
                     
-                    
                 }
             }
+            .animation(.default)
             
             if isEditing{
                 Button(action: {
@@ -76,6 +76,8 @@ struct SearchBar: View {
                         .foregroundColor(.white)
                 })
                 .padding(.trailing, 10)
+                .transition(.move(edge: .trailing))
+                .animation(.default)
             }
         }
     }
