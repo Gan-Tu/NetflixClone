@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ComingSoon: View {
+struct ComingSoonView: View {
     @State private var showNotificationList = false
     @State private var navBarHidden = true
     @State private var movieDetailToShow: Movie? = nil
@@ -30,23 +30,23 @@ struct ComingSoon: View {
                     }
                 }
                 .foregroundColor(.white)
-                .padding(.horizontal, 5)
+                .padding(.horizontal, 10)
             }
             
-            NavigationLink(
-                destination: Text("Notification List"),
-                isActive: $showNotificationList,
-                label: {
-                    EmptyView()
-                })
-            .navigationTitle("")
-            .navigationBarHidden(navBarHidden)
-            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification), perform: {_ in
-                self.navBarHidden = true
-            })
-            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification), perform: {_ in
-                self.navBarHidden = false
-            })
+//            NavigationLink(
+//                destination: Text("Notification List"),
+//                isActive: $showNotificationList,
+//                label: {
+//                    EmptyView()
+//                })
+//            .navigationTitle("")
+//            .navigationBarHidden(navBarHidden)
+//            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification), perform: {_ in
+//                self.navBarHidden = true
+//            })
+//            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification), perform: {_ in
+//                self.navBarHidden = false
+//            })
         }
     }
 }
@@ -54,7 +54,7 @@ struct ComingSoon: View {
 struct ComingSoon_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ComingSoon()
+            ComingSoonView()
         }
     }
 }
