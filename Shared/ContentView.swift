@@ -32,7 +32,7 @@ struct ContentView: View {
                 }
                 .tag("search")
             
-            Text("Coming Soon")
+            ComingSoon()
                 .tabItem {
                     Image(systemName: "play.rectangle")
                     Text("Coming Soon")
