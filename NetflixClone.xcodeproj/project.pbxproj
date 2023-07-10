@@ -16,9 +16,7 @@
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
 		59B81ECF2A5BEFAF00CBF692 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595292802A51EE600074EF0A /* SwiftUI.framework */; };
-		59B81ED02A5BEFAF00CBF692 /* SwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 595292802A51EE600074EF0A /* SwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59B81ED22A5BEFB000CBF692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927A2A51EDC50074EF0A /* UIKit.framework */; };
-		59B81ED32A5BEFB000CBF692 /* UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927A2A51EDC50074EF0A /* UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9425F2689438800FD4021 /* NetflixCloneApp.swift */; };
 		59B942742689438900FD4021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B942602689438800FD4021 /* ContentView.swift */; };
 		59B942762689438900FD4021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B942612689438800FD4021 /* Assets.xcassets */; };
@@ -47,21 +45,6 @@
 		59FC2E4B26895D3E00ABE6EF /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4A26895D3E00ABE6EF /* SmallVerticalButton.swift */; };
 		59FC2E4E2689629600ABE6EF /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC2E4D2689629600ABE6EF /* PlayButton.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		59B81ED12A5BEFAF00CBF692 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				59B81ED02A5BEFAF00CBF692 /* SwiftUI.framework in Embed Frameworks */,
-				59B81ED32A5BEFB000CBF692 /* UIKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		594A21BB26B78E0D008AFF98 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
@@ -281,7 +264,6 @@
 				59B942622689438800FD4021 /* Sources */,
 				59B942632689438800FD4021 /* Frameworks */,
 				59B942642689438800FD4021 /* Resources */,
-				59B81ED12A5BEFAF00CBF692 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -517,9 +499,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DD62CH35WB;
+				DEVELOPMENT_TEAM = K3URZZFDQP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NetflixClone2023;
@@ -530,8 +513,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = v0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.tugan.NetflixClone-test";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tugan.NetflixClone.test;
 				PRODUCT_NAME = NetflixClone;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -548,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3URZZFDQP;
 				ENABLE_PREVIEWS = YES;
@@ -560,7 +543,6 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = v0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tugan.NetflixClone.alpha;
 				PRODUCT_NAME = NetflixClone;
 				SDKROOT = iphoneos;
