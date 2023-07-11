@@ -16,6 +16,7 @@
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
 		599B48252A5CF45200600536 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599B48242A5CF45200600536 /* PreviewCell.swift */; };
+		599B48272A5CF79600600536 /* MoviePreviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599B48262A5CF79600600536 /* MoviePreviewRow.swift */; };
 		59B81ECF2A5BEFAF00CBF692 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595292802A51EE600074EF0A /* SwiftUI.framework */; };
 		59B81ED22A5BEFB000CBF692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927A2A51EDC50074EF0A /* UIKit.framework */; };
 		59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9425F2689438800FD4021 /* NetflixCloneApp.swift */; };
@@ -60,6 +61,7 @@
 		5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
 		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		599B48242A5CF45200600536 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		599B48262A5CF79600600536 /* MoviePreviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreviewRow.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
 		59B942602689438800FD4021 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59B942612689438800FD4021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				599B48242A5CF45200600536 /* PreviewCell.swift */,
+				599B48262A5CF79600600536 /* MoviePreviewRow.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				594A21BF26B78E6A008AFF98 /* SwiftUIVideoViews.swift in Sources */,
 				59CCD3A626A3FC8A007C2D19 /* Episode.swift in Sources */,
 				59C4F0B02A5B2FAF003CF61B /* ComingSoonRow.swift in Sources */,
+				599B48272A5CF79600600536 /* MoviePreviewRow.swift in Sources */,
 				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59C4F0B22A5B3294003CF61B /* ComingSoonViewModel.swift in Sources */,
 				594A21C326B790A4008AFF98 /* VideoPreviewImage.swift in Sources */,
