@@ -15,7 +15,7 @@
 		595292832A52255C0074EF0A /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595292822A52255C0074EF0A /* HomeStack.swift */; };
 		5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */; };
 		59948841268956EC00FCE4D6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59948840268956EC00FCE4D6 /* TopMoviePreview.swift */; };
-		599B48232A5CF0C300600536 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599B48222A5CF0C300600536 /* Preview.swift */; };
+		599B48252A5CF45200600536 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599B48242A5CF45200600536 /* PreviewCell.swift */; };
 		59B81ECF2A5BEFAF00CBF692 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595292802A51EE600074EF0A /* SwiftUI.framework */; };
 		59B81ED22A5BEFB000CBF692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5952927A2A51EDC50074EF0A /* UIKit.framework */; };
 		59B942722689438900FD4021 /* NetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B9425F2689438800FD4021 /* NetflixCloneApp.swift */; };
@@ -59,7 +59,7 @@
 		595292822A52255C0074EF0A /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 		5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
 		59948840268956EC00FCE4D6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
-		599B48222A5CF0C300600536 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		599B48242A5CF45200600536 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		59B9425F2689438800FD4021 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
 		59B942602689438800FD4021 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59B942612689438800FD4021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +176,7 @@
 				5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */,
 				594A21C526B79224008AFF98 /* TrailerList.swift */,
 				594A21C826B79729008AFF98 /* EpisodesView.swift */,
+				599B48242A5CF45200600536 /* PreviewCell.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -183,7 +184,6 @@
 		599B48212A5CF0B800600536 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				599B48222A5CF0C300600536 /* Preview.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -346,6 +346,7 @@
 				59C4F0A42A5B1526003CF61B /* PopularMovieView.swift in Sources */,
 				594A21C926B79729008AFF98 /* EpisodesView.swift in Sources */,
 				59C4F0A22A5B0D7B003CF61B /* GenerateMovies.swift in Sources */,
+				599B48252A5CF45200600536 /* PreviewCell.swift in Sources */,
 				59CE1A362A537CC7004F3A28 /* Colors.swift in Sources */,
 				59B942912689495000FD4021 /* GlobalHelpers.swift in Sources */,
 				594A21BC26B78E0D008AFF98 /* Trailer.swift in Sources */,
@@ -356,7 +357,6 @@
 				59C4F0B02A5B2FAF003CF61B /* ComingSoonRow.swift in Sources */,
 				59B9429426894CB300FD4021 /* HomeViewModel.swift in Sources */,
 				59C4F0B22A5B3294003CF61B /* ComingSoonViewModel.swift in Sources */,
-				599B48232A5CF0C300600536 /* Preview.swift in Sources */,
 				594A21C326B790A4008AFF98 /* VideoPreviewImage.swift in Sources */,
 				59B942742689438900FD4021 /* ContentView.swift in Sources */,
 				59B9428E2689493600FD4021 /* StandardHomeMovie.swift in Sources */,
