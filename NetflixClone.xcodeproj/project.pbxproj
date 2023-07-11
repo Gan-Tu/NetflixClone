@@ -176,7 +176,6 @@
 				5984A5E026AB8798006CDC4D /* MoreLikeThis.swift */,
 				594A21C526B79224008AFF98 /* TrailerList.swift */,
 				594A21C826B79729008AFF98 /* EpisodesView.swift */,
-				599B48242A5CF45200600536 /* PreviewCell.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 		599B48212A5CF0B800600536 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				599B48242A5CF45200600536 /* PreviewCell.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
