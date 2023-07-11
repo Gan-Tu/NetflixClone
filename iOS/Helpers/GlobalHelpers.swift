@@ -53,7 +53,10 @@ let anotherLifeMovie = Movie(id: UUID().uuidString,
                              defaultEpisodeInfo: exampleEpisodeInfo,
                              creators: "Baren bo Odan, Jantje Friese",
                              casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                             moreLikeThisMovies: exampleMovies, episodes: allExampleEpisodes, promotionHeadline: "New Season Coming Soon", trailers: exampleTrailers)
+                             moreLikeThisMovies: exampleMovies,
+                             episodes: allExampleEpisodes,
+                             promotionHeadline: "New Season Coming Soon",
+                             trailers: exampleTrailers)
 
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "DARK",
@@ -66,7 +69,11 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 2 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie6],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 2 Now",
+                          trailers: exampleTrailers,
+                          previewImagesName: "darkPreview")
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
                           thumbnailURL: URL(string: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTVZ98YnPxcbLcQAo-Y3B9soL5qmrEWhNBX8B3k9ztbfLpV9L4d")!,
@@ -78,7 +85,11 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [exampleMovie3, exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie3, exampleMovie6],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 3 Now",
+                          trailers: exampleTrailers,
+                          previewImagesName: "travelersPreview")
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
                           thumbnailURL: URL(string: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSci30EUiCl0LdmvNUSU_FHSLZ6xzWL_WaL6taf5nIj2jZOnQL3")!,
@@ -90,7 +101,10 @@ let exampleMovie3 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 4 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 4 Now",
+                          trailers: exampleTrailers)
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
                           thumbnailURL: URL(string: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRcpFF8SLpb3D_7OTxWx_xtyzT0Y53WGr8F62eJQCLZOZcytyMf")!,
@@ -102,7 +116,10 @@ let exampleMovie4 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [exampleMovie3, exampleMovie5, exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 5 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie3, exampleMovie5, exampleMovie6],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 5 Now",
+                          trailers: exampleTrailers)
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hanibal",
                           thumbnailURL: URL(string: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4aPry05UcgW5aqFs_8TBCHPDKzFkxoEg-dM7KQW4-Q-tg4B2w")!,
@@ -114,7 +131,10 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [exampleMovie6], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 6 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [exampleMovie6],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 6 Now",
+                          trailers: exampleTrailers)
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "The Crown",
                           thumbnailURL: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuPIjEs8ExVQZCLJQxHwIdsm53CobGd-e1vMsH6isgJxoxuR6q")!,
@@ -126,10 +146,82 @@ let exampleMovie6 = Movie(id: UUID().uuidString,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "Baren bo Odan, Jantje Friese",
                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
-                          moreLikeThisMovies: [], episodes: allExampleEpisodes, promotionHeadline: "Watch Season 3 Now", trailers: exampleTrailers)
+                          moreLikeThisMovies: [],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 3 Now",
+                          trailers: exampleTrailers)
+
+let exampleMovie7 = Movie(id: UUID().uuidString,
+                          name: "The White Line",
+                          thumbnailURL: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM2WxIE6vTNec9_hlXPy6XbYZ0u2F4c7EmCq6Zc2iypwkDsiNk")!,
+                          categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
+                          movieType: .movies,
+                          year: 2020,
+                          rating: "TV-MA",
+                          numberOfSeasons: 2,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
+                          moreLikeThisMovies: [],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 4 Now",
+                          trailers: exampleTrailers,
+                          previewImagesName: "whiteLinesPreview")
+let exampleMovie8 = Movie(id: UUID().uuidString,
+                          name: "Arrested Development",
+                          thumbnailURL: URL(string: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPr6hKMSYPamKPOz7fsbu1DR0VQ8-EBpeP5WhOw_rsrHTwXmxk")!,
+                          categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
+                          movieType: .movies,
+                          year: 2020,
+                          rating: "TV-MA",
+                          numberOfSeasons: 2,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
+                          moreLikeThisMovies: [exampleMovie3, exampleMovie5, exampleMovie6],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 5 Now",
+                          trailers: exampleTrailers,
+                          previewImagesName: "arrestedDevPreview")
+let exampleMovie9 = Movie(id: UUID().uuidString,
+                          name: "Ozark",
+                          thumbnailURL: URL(string: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTyTEJTAcLeVVDlNV7KfQPL9ofBjuhT5Hm4vHZ7hj1DAb1ngs4h")!,
+                          categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
+                          movieType: .tvShow,
+                          year: 2020,
+                          rating: "TV-MA",
+                          numberOfSeasons: 6,
+                          defaultEpisodeInfo: exampleEpisodeInfo,
+                          creators: "Baren bo Odan, Jantje Friese",
+                          casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
+                          moreLikeThisMovies: [exampleMovie6],
+                          episodes: allExampleEpisodes,
+                          promotionHeadline: "Watch Season 6 Now",
+                          trailers: exampleTrailers,
+                          previewImagesName: "ozarkPreview")
+let exampleMovie10 = Movie(id: UUID().uuidString,
+                           name: "Dirty John",
+                           thumbnailURL: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYCkRjijumA3ITdjcOc6RtcJxP4NDvXQP6FOjWWvotmEtQZXl")!,
+                           categories: ["Dystopian", "Exciting", "Suspensiful", "Sci-Fi"],
+                           movieType: .tvShow,
+                           year: 2020,
+                           rating: "TV-MA",
+                           numberOfSeasons: 1,
+                           defaultEpisodeInfo: exampleEpisodeInfo,
+                           creators: "Baren bo Odan, Jantje Friese",
+                           casts: "Louis Hofmann, Oliver Mscucci, Jordi Tribel",
+                           moreLikeThisMovies: [],
+                           episodes: allExampleEpisodes,
+                           promotionHeadline: "Watch Season 3 Now",
+                           trailers: exampleTrailers,
+                           previewImagesName: "dirtyJohnPreview")
 
 var exampleMovies: [Movie] {
-    return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+    return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7, exampleMovie8, exampleMovie9, exampleMovie10]
+}
+
+var previewMovies: [Movie] {
+    return [exampleMovie1, exampleMovie2, exampleMovie7, exampleMovie8, exampleMovie9, exampleMovie10]
 }
 
 
