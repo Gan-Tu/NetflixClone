@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,7 @@
 		59CCD3A026A3F0FD007C2D19 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */; };
 		59CCD3A626A3FC8A007C2D19 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD3A526A3FC8A007C2D19 /* Episode.swift */; };
 		59CCD3A926A40354007C2D19 /* CustomTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCD3A826A40354007C2D19 /* CustomTabSwitcher.swift */; };
+		59CD0DD52A63445200685838 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CD0DD42A63445200685838 /* PagerView.swift */; };
 		59CE1A342A537C41004F3A28 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE1A332A537C41004F3A28 /* SearchBar.swift */; };
 		59CE1A362A537CC7004F3A28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE1A352A537CC7004F3A28 /* Colors.swift */; };
 		59CE1A382A5380B8004F3A28 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE1A372A5380B8004F3A28 /* ActivityIndicator.swift */; };
@@ -86,6 +87,7 @@
 		59CCD39F26A3F0FD007C2D19 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		59CCD3A526A3FC8A007C2D19 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		59CCD3A826A40354007C2D19 /* CustomTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcher.swift; sourceTree = "<group>"; };
+		59CD0DD42A63445200685838 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
 		59CE1A332A537C41004F3A28 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		59CE1A352A537CC7004F3A28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		59CE1A372A5380B8004F3A28 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				599B48242A5CF45200600536 /* PreviewCell.swift */,
+				59CD0DD42A63445200685838 /* PagerView.swift */,
 				599B48262A5CF79600600536 /* MoviePreviewRow.swift */,
 			);
 			path = Preview;
@@ -315,6 +318,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 59B942592689438700FD4021;
 			packageReferences = (
@@ -374,6 +378,7 @@
 				59CE1A342A537C41004F3A28 /* SearchBar.swift in Sources */,
 				5984A5E126AB8798006CDC4D /* MoreLikeThis.swift in Sources */,
 				594A21C626B79224008AFF98 /* TrailerList.swift in Sources */,
+				59CD0DD52A63445200685838 /* PagerView.swift in Sources */,
 				59C4F0AE2A5B2DF2003CF61B /* NotificationBar.swift in Sources */,
 				59CCD3A926A40354007C2D19 /* CustomTabSwitcher.swift in Sources */,
 				59C4F09F2A5B0AB5003CF61B /* SearchViewModel.swift in Sources */,
