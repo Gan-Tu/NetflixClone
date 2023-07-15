@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var showPreviewFullScreen: Bool
-    @Binding var previewStartingIndex: Int
-    
+    @EnvironmentObject var controller: PreviewController
     var vm : HomeViewModel = HomeViewModel()
     
     let screen = UIScreen.main.bounds
@@ -41,7 +39,7 @@ struct HomeView: View {
                         .padding(.top, -100)
                         .zIndex(-1.0)
                     
-                    MoviePreviewRow(movies: previewMovies, showPreviewFullScreen: $showPreviewFullScreen, previewStartingIndex: $previewStartingIndex)
+                    MoviePreviewRow(movies: previewMovies)
                     
                     HomeStack(vm: vm,
                               topRowSelection: topRowSelection,
@@ -137,8 +135,10 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    static var controller = PreviewController()
     static var previews: some View {
-        HomeView(showPreviewFullScreen: .constant(false), previewStartingIndex: .constant(0))
+        HomeView()
+            .environmentObject(controller)
     }
 }
 

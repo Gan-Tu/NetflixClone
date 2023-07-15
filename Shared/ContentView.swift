@@ -8,27 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var showPreviewFullScreen = false
-    @State private var previewStartingIndex: Int = 0
+    @ObservedObject var controller = PreviewController()
     
     @State private var previewCurrentPos: CGFloat = 1000
     
     let screen = UIScreen.main.bounds
-    
     
     init() {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor.black
     }
     
-    
     var body: some View {
         ZStack {
             TabView {
-                HomeView(
-                    showPreviewFullScreen: $showPreviewFullScreen,
-                    previewStartingIndex: $previewStartingIndex)
+                HomeView()
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")
@@ -67,13 +61,13 @@ struct ContentView: View {
             .background(Color.black)
             .edgesIgnoringSafeArea(.all)
             
-            PreviewList(movies: previewMovies, currentSelection: $previewStartingIndex, isVisible: $showPreviewFullScreen)
+            PreviewList(movies: previewMovies)
                 .offset(y: previewCurrentPos)   // useful for user drag gesture
-                .isHidden(!showPreviewFullScreen)
+                .isHidden(!controller.showPreviewFullScreen)
                 .animation(.easeIn)
                 .transition(.move(edge: .bottom))
         }
-        .onChange(of: showPreviewFullScreen, perform: { showPreview in
+        .onChange(of: controller.showPreviewFullScreen, perform: { showPreview in
             if showPreview {
                 withAnimation {
                     previewCurrentPos = .zero
@@ -84,6 +78,7 @@ struct ContentView: View {
                 }
             }
         })
+        .environmentObject(controller)
     }
 }
 

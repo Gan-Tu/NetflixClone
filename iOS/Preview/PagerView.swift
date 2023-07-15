@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct PagerView<Content: View>: View {
+    @EnvironmentObject var controller: PreviewController
+
     let pageCount: Int
-    @Binding var currentIndex: Int
-    @Binding var translation: CGFloat
     let content: Content
     
     init (
         pageCount: Int,
-        currentIndex: Binding<Int>,
-        translation: Binding<CGFloat>,
         @ViewBuilder content: () -> Content) {
             self.pageCount = pageCount
-            self._currentIndex = currentIndex
-            self._translation = translation
             self.content = content()
     }
     
@@ -30,43 +26,42 @@ struct PagerView<Content: View>: View {
                 self.content.frame(width: geo.size.width)
             }
             .frame(width: geo.size.width, alignment: .leading)
-            .offset(x: -geo.size.width * CGFloat(currentIndex))
-            .offset(x: self.translation)
+            .offset(x: -geo.size.width * CGFloat(controller.currentPreviewMovieIndex))
+            .offset(x: controller.translation_x)
             .animation(.interactiveSpring())
             .gesture(
                 DragGesture()
                     .onChanged({ value in
-                        if ((currentIndex == 0 && value.translation.width > 0) ||
-                            (currentIndex == pageCount - 1 && value.translation.width < 0)) {
+                        if ((controller.currentPreviewMovieIndex == 0 && value.translation.width > 0) ||
+                            (controller.currentPreviewMovieIndex == pageCount - 1 && value.translation.width < 0)) {
                             // do nothing
                         } else {
-                            translation = value.translation.width
+                            controller.translation_x = value.translation.width
                         }
                     })
                     .onEnded({ value in
                         let offset = value.translation.width / geo.size.width
-                        let newIndex = (CGFloat(self.currentIndex) - offset).rounded()
-                        currentIndex = min(max(Int(newIndex), 0), pageCount-1)
-                        translation = .zero
+                        let newIndex = (CGFloat(controller.currentPreviewMovieIndex) - offset).rounded()
+                        controller.currentPreviewMovieIndex = min(max(Int(newIndex), 0), pageCount-1)
+                        controller.translation_x = .zero
                     })
             )
         }
         .edgesIgnoringSafeArea(.all)
+//        .offset(y: 100)
     }
 }
 
 struct PagerViewDummy: View {
-    @State private var currentIndex: Int = 0
-    @State private var translation: CGFloat = .zero
+    private var controller = PreviewController()
     
     var body: some View {
-        PagerView(pageCount: 3,
-                  currentIndex: $currentIndex,
-                  translation: $translation) {
+        PagerView(pageCount: 3) {
             Color.red
             Color.blue
             Color.black
         }
+        .environmentObject(controller)
     }
 }
 
