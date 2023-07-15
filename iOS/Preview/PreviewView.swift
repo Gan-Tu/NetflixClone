@@ -23,9 +23,17 @@ struct PreviewView: View {
             VStack {
                 HStack {
                     VStack(alignment: .leading, spacing: 0, content: {
-                        Text(vm.movie.name)
-                            .bold()
-                            .font(.largeTitle)
+                        if vm.movie.previewImagesName != nil {
+                            Image(vm.movie.previewImagesName!)
+                                .resizable()
+                                .scaledToFit()
+                                .offset(y: -20)
+                                .frame(height: 65)
+                        } else {
+                            Text(vm.movie.name)
+                                .bold()
+                                .font(.largeTitle)
+                        }
                     })
                     
                     Spacer()
