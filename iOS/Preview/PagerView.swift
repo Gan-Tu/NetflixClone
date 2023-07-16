@@ -26,7 +26,9 @@ struct PagerView<Content: View>: View {
                 self.content.frame(width: geo.size.width)
             }
             .frame(width: geo.size.width, alignment: .leading)
-            .offset(x: controller.getOffsetX(sizeOfOneScreen: geo.size.width,
+            .offset(x: controller.getOffsetX(screenSize: geo.size,
+                                             pageCount: pageCount),
+                    y: controller.getOffsetY(screenSize: geo.size,
                                              pageCount: pageCount))
             .animation(.interactiveSpring())
             .gesture(
@@ -34,12 +36,14 @@ struct PagerView<Content: View>: View {
                     .onChanged({ value in
                         controller.drag_transition_x = value.translation.width
                         controller.drag_transition_y = value.translation.height
+                        controller.startDrag()
                     })
                     .onEnded({ value in
                         controller.drag_transition_x = value.translation.width
                         controller.drag_transition_y = value.translation.height
                         controller.transitionPreview(
-                            sizeOfOneScreen: geo.size.width, pageCount: pageCount)
+                            screenSize: geo.size, pageCount: pageCount)
+                        controller.endDrag(screenSize: geo.size)
                     })
             )
         }

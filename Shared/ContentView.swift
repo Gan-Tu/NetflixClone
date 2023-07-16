@@ -64,7 +64,7 @@ struct ContentView: View {
             PreviewList(movies: previewMovies)
                 .offset(y: previewCurrentPos)   // useful for user drag gesture
                 .isHidden(!controller.showPreviewFullScreen)
-                .animation(.easeIn)
+                .animation(.easeInOut)
                 .transition(.move(edge: .bottom))
         }
         .onChange(of: controller.showPreviewFullScreen, perform: { showPreview in

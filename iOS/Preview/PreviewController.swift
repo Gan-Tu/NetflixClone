@@ -19,8 +19,47 @@ class PreviewController : ObservableObject {
     @Published var drag_transition_x: CGFloat = .zero
     @Published var drag_transition_y: CGFloat = .zero
     
-    public func getOffsetX(sizeOfOneScreen screenSize: Double, pageCount: Int) -> Double {
-        let pageOffset = -screenSize * CGFloat(currentPreviewMovieIndex);
+    enum SwipeDirection {
+        case UNSET
+        case VERTICAL
+        case HORIZONTAL
+    }
+    var swipe_direction: SwipeDirection = .UNSET
+    
+    public func startDrag() {
+        if swipe_direction == .UNSET {
+            if abs(drag_transition_x) > abs(drag_transition_y) {
+                swipe_direction = .HORIZONTAL
+            } else {
+                swipe_direction = .VERTICAL
+            }
+        }
+    }
+    
+    public func endDrag(screenSize: CGSize) {
+        swipe_direction = .UNSET
+        if drag_transition_y >= screenSize.height {
+            showPreviewFullScreen = false
+        }
+    }
+    
+    public func transitionPreview(screenSize: CGSize, pageCount: Int) -> Void {
+        let dragOffsetXPercent = drag_transition_x / screenSize.width
+        let newIndex = (CGFloat(currentPreviewMovieIndex) - dragOffsetXPercent).rounded()
+        currentPreviewMovieIndex = min(max(Int(newIndex), 0), pageCount-1)
+        drag_transition_x = 0.0
+        let dragOffsetYPercent = drag_transition_y / screenSize.height
+        if (dragOffsetYPercent > 0.5) {
+            showPreviewFullScreen = false   // hide view
+        }
+        drag_transition_y = 0.0     // reset position
+    }
+    
+    public func getOffsetX(screenSize: CGSize, pageCount: Int) -> Double {
+        let pageOffset = -screenSize.width * CGFloat(currentPreviewMovieIndex);
+        if (swipe_direction == .VERTICAL) {
+            return pageOffset
+        }
         var dragOffset = drag_transition_x
         if (currentPreviewMovieIndex == 0 && drag_transition_x > 0) {
             // swipe right has no effect on left most screen
@@ -32,10 +71,10 @@ class PreviewController : ObservableObject {
         return pageOffset + dragOffset
     }
     
-    public func transitionPreview(sizeOfOneScreen screenSize: Double, pageCount: Int) -> Void {
-        let dragOffsetPercent = drag_transition_x / screenSize
-        let newIndex = (CGFloat(currentPreviewMovieIndex) - dragOffsetPercent).rounded()
-        currentPreviewMovieIndex = min(max(Int(newIndex), 0), pageCount-1)
-        drag_transition_x = 0.0
+    public func getOffsetY(screenSize: CGSize, pageCount: Int) -> Double {
+        if (swipe_direction == .HORIZONTAL) {
+            return 0
+        }
+        return max(drag_transition_y, 0)    // no swipe up
     }
 }
