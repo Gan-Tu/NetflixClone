@@ -32,7 +32,7 @@ struct PagerView<Content: View>: View {
                                              pageCount: pageCount))
             .animation(.interactiveSpring())
             .gesture(
-                DragGesture()
+                DragGesture(minimumDistance: 0)
                     .onChanged({ value in
                         controller.drag_transition_x = value.translation.width
                         controller.drag_transition_y = value.translation.height
@@ -42,7 +42,9 @@ struct PagerView<Content: View>: View {
                         controller.drag_transition_x = value.translation.width
                         controller.drag_transition_y = value.translation.height
                         controller.transitionPreview(
-                            screenSize: geo.size, pageCount: pageCount)
+                            endXCoordinate: value.location.x,
+                            screenSize: geo.size,
+                            pageCount: pageCount)
                         controller.endDrag(screenSize: geo.size)
                     })
             )

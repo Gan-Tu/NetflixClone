@@ -43,7 +43,29 @@ class PreviewController : ObservableObject {
         }
     }
     
-    public func transitionPreview(screenSize: CGSize, pageCount: Int) -> Void {
+    public func nextPage(pageCount: Int) {
+        if currentPreviewMovieIndex < pageCount - 1 {
+            currentPreviewMovieIndex += 1
+        }
+    }
+    
+    public func prevPage() {
+        if currentPreviewMovieIndex > 0 {
+            currentPreviewMovieIndex -= 1
+        }
+    }
+    
+    public func transitionPreview(endXCoordinate: CGFloat, screenSize: CGSize, pageCount: Int) -> Void {
+        if (drag_transition_x == 0 && drag_transition_y == 0) {
+            if (endXCoordinate < screenSize.width / 2) {
+                // left tap gesture
+                prevPage()
+            } else {
+                nextPage(pageCount: pageCount)
+            }
+            return
+        }
+        
         let dragOffsetXPercent = drag_transition_x / screenSize.width
         let newIndex = (CGFloat(currentPreviewMovieIndex) - dragOffsetXPercent).rounded()
         currentPreviewMovieIndex = min(max(Int(newIndex), 0), pageCount-1)
