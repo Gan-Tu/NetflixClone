@@ -93,6 +93,10 @@ struct PreviewView: View {
     }
 }
 
-#Preview {
-    PreviewView(vm: PreviewViewModel(movie: exampleMovie7), playVideo: true)
+struct PreviewView_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewView(vm: PreviewViewModel(movie: exampleMovie7), playVideo: true)
+        
+    }
 }
+

@@ -36,6 +36,8 @@ struct PreviewListPreviewWrapper: View {
     }
 }
 
-#Preview {
-    PreviewListPreviewWrapper(movies: previewMovies)
+struct PreviewList_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewListPreviewWrapper(movies: previewMovies)
+    }
 }

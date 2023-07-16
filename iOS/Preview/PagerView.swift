@@ -48,7 +48,6 @@ struct PagerView<Content: View>: View {
             )
         }
         .edgesIgnoringSafeArea(.all)
-//        .offset(y: 100)
     }
 }
 
@@ -65,7 +64,9 @@ struct PagerViewDummy: View {
     }
 }
 
-#Preview {
-    PagerViewDummy()
+struct PagerViewDummy_Previews: PreviewProvider {
+    static var previews: some View {
+        PagerViewDummy()
+    }
 }
 

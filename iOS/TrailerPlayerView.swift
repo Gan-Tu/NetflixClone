@@ -22,10 +22,14 @@ struct TrailerPlayerView: View {
     }
 }
 
-#Preview("Working") {
-    TrailerPlayerView(videoURL: exampleVideoURL, playVideo: .constant(false))
+struct TrailerPlayerView_Previews: PreviewProvider {
+    static var previews: some View {
+        TrailerPlayerView(videoURL: exampleVideoURL, playVideo: .constant(true))
+    }
 }
 
-#Preview("Failure") {
-    TrailerPlayerView(videoURL: nil, playVideo: .constant(true))
+struct TrailerPlayerView_Previews2: PreviewProvider {
+    static var previews: some View {
+        TrailerPlayerView(videoURL: nil, playVideo: .constant(true))
+    }
 }
